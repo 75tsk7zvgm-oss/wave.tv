@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#090b13" />
+  <title>WAVE TV</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="WAVE TV home"><span class="brand-mark">〰</span><span>WAVE<span class="brand-tv">TV</span></span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <button class="nav-item active" data-view="home">Home</button>
+      <button class="nav-item" data-view="live">Live TV</button>
+      <button class="nav-item" data-view="movies">Movies</button>
+      <button class="nav-item" data-view="series">Series</button>
+      <button class="nav-item" data-view="mylist">My List</button>
+      <button class="nav-item" data-view="apps">Apps</button>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="searchToggle" title="Search" aria-label="Search">⌕</button>
+      <button class="profile" title="Profile">W</button>
+    </div>
+  </header>
+  <div class="searchbar" id="searchbar"><input id="searchInput" type="search" placeholder="Search movies, series and services…" /><button id="clearSearch">✕</button></div>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="hero-image"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="pulse"></span> WAVE ORIGINAL • FEATURED</div>
+        <h1>Beyond<br><em>the Horizon</em></h1>
+        <p class="hero-copy">When the world goes quiet, the biggest journey begins. Discover a story that takes you beyond what you know.</p>
+        <div class="hero-meta"><span class="tag">4K UHD</span><span>Adventure</span><span>2026</span><span>2h 08m</span></div>
+        <div class="hero-buttons"><button class="primary-btn" id="heroPlay">▶ &nbsp; Play</button><button class="secondary-btn" id="heroInfo">ⓘ &nbsp; More info</button></div>
+      </div>
+      <div class="hero-side-note">YOUR ENTERTAINMENT. ONE PLACE.</div>
+    </section>
+
+    <section class="content-section" id="continueSection">
+      <div class="section-heading"><h2>Continue watching</h2><button class="text-btn" data-view="mylist">See all <span>›</span></button></div>
+      <div class="card-row" id="continueRow"></div>
+    </section>
+    <section class="content-section" id="trendingSection">
+      <div class="section-heading"><h2>Trending now</h2><span class="section-sub">Popular across WAVE</span></div>
+      <div class="poster-row" id="trendingRow"></div>
+    </section>
+    <section class="content-section">
+      <div class="section-heading"><h2>Explore your apps</h2><button class="text-btn" data-view="apps">All apps <span>›</span></button></div>
+      <div class="service-row" id="serviceRow"></div>
+    </section>
+    <section class="content-section">
+      <div class="section-heading"><h2>Made for your evening</h2><span class="section-sub">A little something for every mood</span></div>
+      <div class="mood-grid">
+        <button class="mood-card mood-action" data-filter="Adventure"><span>ADVENTURE</span><small>Get lost in another world</small></button>
+        <button class="mood-card mood-thrill mood-action" data-filter="Thriller"><span>THRILLERS</span><small>Keep you on the edge</small></button>
+        <button class="mood-card mood-family mood-action" data-filter="Family"><span>FAMILY</span><small>Something for everyone</small></button>
+        <button class="mood-card mood-doc mood-action" data-filter="Documentary"><span>DOCUMENTARIES</span><small>Real stories, new perspectives</small></button>
+      </div>
+    </section>
+  </main>
+  <footer><span class="brand small"><span class="brand-mark">〰</span> WAVE TV</span><span>Personal streaming dashboard • Connect your authorised services</span><span>© 2026 WAVE</span></footer>
+
+  <dialog id="detailModal"><div class="modal-art" id="modalArt"></div><button class="modal-close" id="modalClose">✕</button><div class="modal-body"><div class="eyebrow" id="modalLabel">WAVE LIBRARY</div><h2 id="modalTitle"></h2><p class="modal-desc" id="modalDesc"></p><div class="modal-meta" id="modalMeta"></div><div class="hero-buttons"><button class="primary-btn" id="modalPlay">▶ &nbsp; Play</button><button class="secondary-btn" id="modalList">＋ &nbsp; Add to My List</button></div></div></dialog>
+  <dialog id="playerModal" class="player-modal"><button class="modal-close" id="playerClose">✕</button><div class="player-screen"><div class="player-logo">〰 WAVE</div><div class="player-message"><span class="player-symbol">▶</span><h2 id="playerTitle">Playback preview</h2><p>Connect an authorised playback source to watch here.</p><button class="secondary-btn" id="playerServices">Explore streaming apps</button></div><div class="player-controls"><span>00:00</span><div class="progress"><span></span></div><span>--:--</span><span>⚙</span></div></div></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
